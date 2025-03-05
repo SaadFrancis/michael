@@ -137,7 +137,7 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2 class="animate__animated animate__fadeIn">Contact Us</h2>
-        <form action="" method="post" class="animate__animated animate__fadeIn animate__delay-3s">
+        <form action="send-mail.php" method="post" class="animate__animated animate__fadeIn animate__delay-3s">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
     
@@ -223,51 +223,3 @@ window.addEventListener('scroll', () => {
 </script>
 </body>
 </html>
-
-<?php 
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-if(isset($_POST['send'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-require 'PHPMailer\PHPMailer.php';
-require 'PHPMailer\Exception.php';
-require 'PHPMailer\SMTP.php';
-
-$mail = new PHPMailer(true);
-
-try {
-    $mail->isSMTP();                                         
-    $mail->Host       = 'smtp.gmail.com';                     
-    $mail->SMTPAuth   = true;                                    
-    $mail->Username   = 'usmansheikh4610@gmail.com';                     
-    $mail->Password   = 'bbsntfpxtoisfmcr';                                
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;             
-    $mail->Port       = 465;                                     
-
-    //Recipients
-    $mail->setFrom('usmansheikh@gmail.com', 'Contact Form'); // Send from here
-    $mail->addAddress('usmansheikh4610@gmail.com', 'Message From Here');     // Send to here
-
-    //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'VLM Virtual Inquiry';
-    $mail->Body    = 'Name : '.$name.' Email : '.$email.' Message : '.$message;
-    $mail->send();
-    echo "<div>Message has been sent</div>";
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
-
-}
-else{
-    echo 'Method Not Found..!!';
-}
-
-
-?>
