@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+h1, h2, h3 {
+    color: #333;
+}
+
+
+
+.services-hero {
+    text-align: center;
+    padding: 100px 20px 50px;
+    background: url('../assets/modern-equipped-computer-lab.jpg') no-repeat center center/cover;
+    color: white; /* Ensure text is readable on the background */
+    position: relative;
+    height: 500px;
+    display: flex
+    ;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-end;
+        align-items: center;
+}
+
+.services-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.services-hero h1
+ {
+   
+    margin-top: 50px;
+   color: #ffffff;
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+.services-hero p
+ {
+    top: 441px;
+   color: #ffffff;
+    position: absolute;
+    z-index: 2;
+}
+
+
+
+
+/* .services-hero {
+    text-align: center;
+    padding: 100px 20px 50px;
+    background: #f4f4f4;
+} */
+.btn{
+
+    border: none;
+    background-color: #007bff;
+    border-radius: 2rem;
+    height: 5vh;
+    width: 34%;
+    cursor: pointer;
+    color: #ffffff;
+    margin-top: 12px; 
+
+}
+.services-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.services-hero p {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.services-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+    
+}
+
+.service-card {
+    text-align: center;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #555;
+}
+
+header {
+    position: absolute; /* Keeps the header fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+    /* background: rgba(0, 0, 0, 0.3); Semi-transparent black background */
+    color: white; /* Text color */
+    z-index: 1000; /* Ensure header is above other content */
+    transition: background 0.3s ease; /* Smooth transition for background color */
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Logo styling */
+header .logo h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Navigation Links */
+nav ul.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.nav-links li {
+    margin: 0 15px;
+}
+
+nav ul.nav-links li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+nav ul.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight hover effect */
+}
+
+/* Hamburger Menu Styles for Mobile */
+.hamburger {
+    display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px) {
+    /* On mobile screens, show the hamburger menu */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #005f8a;
+        position: absolute;
+        top: 60px; /* Below the navbar */
+        left: 0;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    flex: 1;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-logo h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #f39c12; /* Accent color for logo */
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer-links {
+    flex: 1;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #f39c12; /* Accent color on hover */
+}
+
+.footer-social {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-social .social-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: #f39c12; /* Accent color on hover */
+}
+
+.footer-bottom {
+    background-color: #222; /* Darker background for the bottom part */
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-links,
+    .footer-social {
+        flex: 1 100%;
+        padding: 0;
+        margin: 10px 0;
+    }
+}

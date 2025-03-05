@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Services - Home</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+           <img src="./assets/WLM virtual copy-01.png"  style="height: 100px; width: 400px;">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- Hamburger Menu Icon for Mobile -->
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Background Video -->
+        <div class="video-background">
+            <video autoplay muted loop id="video-background">
+                <source src="./assets/1114502_Plan_Architecture_3840x2160.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <!-- Content on top of the video -->
+        <div class="hero-content">
+            <h2 class="animate__animated animate__fadeIn animate__delay-1s">Your Financial Growth Starts Here</h2>
+            <p class="animate__animated animate__fadeIn animate__delay-2s">Expert Credit Repair, Business Funding & Tax Preparation Services.</p>
+            <a href="#contact" class="cta-button animate__animated animate__fadeIn animate__delay-3s">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <!-- <section id="services">
+        <h2 class="animate__animated animate__fadeIn">Our Services</h2>
+        <div class="services-container">
+            <div class="service animate__animated animate__fadeIn animate__delay-1s">
+                <i class="fas fa-credit-card fa-3x"></i>
+                <h3>Credit Repair</h3>
+                <p>Improve your credit score with professional guidance and support.</p>
+            </div>
+            <div class="service animate__animated animate__fadeIn animate__delay-2s">
+                <i class="fas fa-business-time fa-3x"></i>
+                <h3>Business Funding</h3>
+                <p>Get the funding your business needs to grow and succeed.</p>
+            </div>
+            <div class="service animate__animated animate__fadeIn animate__delay-3s">
+                <i class="fas fa-file-invoice-dollar fa-3x"></i>
+                <h3>Tax Preparation</h3>
+                <p>Efficient and reliable tax services for individuals and businesses.</p>
+            </div>
+
+            
+        </div>
+        <div class="services-container">
+            <div class="service animate__animated animate__fadeIn animate__delay-1s">
+                <i class="fas fa-credit-card fa-3x"></i>
+                <h3>Credit Repair</h3>
+                <p>Improve your credit score with professional guidance and support.</p>
+            </div>
+            <div class="service animate__animated animate__fadeIn animate__delay-2s">
+                <i class="fas fa-business-time fa-3x"></i>
+                <h3>Business Funding</h3>
+                <p>Get the funding your business needs to grow and succeed.</p>
+            </div>
+            <div class="service animate__animated animate__fadeIn animate__delay-3s">
+                <i class="fas fa-file-invoice-dollar fa-3x"></i>
+                <h3>Tax Preparation</h3>
+                <p>Efficient and reliable tax services for individuals and businesses.</p>
+            </div>
+
+            
+        </div>
+    </section> -->
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2 class="animate__animated animate__fadeIn">About Us</h2>
+        <p class="animate__animated animate__fadeIn">We are a dedicated financial firm helping individuals and businesses rebuild their credit, secure funding, and prepare their taxes with confidence and ease.</p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2 class="animate__animated animate__fadeIn">What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <!-- Card 1 -->
+            <div class="testimonial-card">
+                <img src="./assets/handsome-man-making-ok-sign.png" alt="Client 1" style="width: 200px; height: 200px;">
+                <div class="testimonial-content">
+                    <p>"This firm helped me repair my credit and secure a loan for my business. I'm forever grateful!"</p>
+                    <cite>- Jane Doe, Business Owner</cite>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="testimonial-card">
+                <img src="./assets/young-man-wearing-blue-outfit-holding-gesture.png" alt="Client 2"  style="width: 200px; height: 200px;">
+                <div class="testimonial-content">
+                    <p>"Professional and thorough tax services. I saved time and money!"</p>
+                    <cite>- John Smith, Individual Client</cite>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="testimonial-card">
+                <img src="./assets/handsome-satisfied-bearded-man-show-okay-sign.png" alt="Client 3"style="width: 200px; height: 200px;">
+                <div class="testimonial-content">
+                    <p>"The team was really helpful in navigating the complexities of business funding. Highly recommend!"</p>
+                    <cite>- Sarah Lee, Entrepreneur</cite>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <!-- <div class="slider-nav">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div> -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="animate__animated animate__fadeIn">Contact Us</h2>
+        <form action="" method="post" class="animate__animated animate__fadeIn animate__delay-3s">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+    
+            <button type="submit" name="send" >Submit</button>
+        </form>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Financial Firm</h3>
+                <p>Rebuilding credit, securing funding, and tax services with trust and reliability.</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Financial Firm. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Linking Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+
+
+
+
+    </script>
+
+
+<script>
+  // Get the header element
+const header = document.querySelector('header');
+
+// Listen for scroll events
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.style.background = 'rgba(0, 0, 0, 0.8)'; // Darker background after scrolling
+    } else {
+        header.style.background = 'rgba(0, 0, 0, 0.0)'; // Transparent background when at the top
+    }
+});
+
+
+
+    
+</script>
+</body>
+</html>
+
+<?php 
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+if(isset($_POST['send'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+require 'PHPMailer\PHPMailer.php';
+require 'PHPMailer\Exception.php';
+require 'PHPMailer\SMTP.php';
+
+$mail = new PHPMailer(true);
+
+try {
+    $mail->isSMTP();                                         
+    $mail->Host       = 'smtp.gmail.com';                     
+    $mail->SMTPAuth   = true;                                    
+    $mail->Username   = 'usmansheikh4610@gmail.com';                     
+    $mail->Password   = 'bbsntfpxtoisfmcr';                                
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;             
+    $mail->Port       = 465;                                     
+
+    //Recipients
+    $mail->setFrom('usmansheikh@gmail.com', 'Contact Form'); // Send from here
+    $mail->addAddress('usmansheikh4610@gmail.com', 'Message From Here');     // Send to here
+
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'VLM Virtual Inquiry';
+    $mail->Body    = 'Name : '.$name.' Email : '.$email.' Message : '.$message;
+    $mail->send();
+    echo "<div>Message has been sent</div>";
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+
+}
+else{
+    echo 'Method Not Found..!!';
+}
+
+
+?>

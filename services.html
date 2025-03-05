@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="styles/services.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header dynamically loaded -->
+    <div id="header-container"></div>
+    <main>
+        <section class="services-hero">
+            <h1>Our Services</h1>
+            <p>Explore the range of financial services we offer to help you succeed.</p>
+        </section>
+
+        <section class="services-list">
+            <div class="service-card">
+                <i class="fas fa-credit-card"></i>
+                <h3>Credit Repair</h3>
+                <p>We help you improve your credit score and rebuild your financial future.</p>
+              <a  target="_blank" href="https://member.identityiq.com/sc-securemax.aspx?offercode=431266ZO">   <button class="btn"  >Visit Now</button></a>
+              <form action="checkout.php" class="mt-5" method="POST">
+                <button class="btn btn-info" type="submit" >Check Out</button>
+              </form>  
+            </div>
+            <div class="service-card">
+                <i class="fas fa-business-time"></i>
+                <h3>Business Funding</h3>
+                <p>Secure the necessary funding for your business with our expert guidance and tailored solutions.</p>
+                <a  target="_blank" href="https://pulse.disputeprocess.com/jsp/custom_form.jsp?tab_id=40000&add_affiliate=0&cust_type=2&company_id=12618&isLinkFromIframe=1&redirect_url=">   <button class="btn">Visit Now</button></a> 
+                <form action="checkout.php" class="mt-5" method="POST">
+                    <button class="btn btn-info" type="submit" >Check Out</button>
+                  </form>  
+            </div>
+            <div class="service-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>Tax Preparation</h3>
+                <p >Reliable and efficient tax services for individuals and businesses available now.</p>
+                <a  target="_blank" href="https://tradeline.store/wlm-virtual">   <button class="btn" >Visit Now</button></a>  
+                <form action="checkout.php" class="mt-5" method="POST">
+                    <button class="btn btn-info" type="submit" >Check Out</button>
+                  </form> 
+            </div>
+
+
+        </section>
+
+
+
+
+
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Financial Firm</h3>
+                <p>Rebuilding credit, securing funding, and tax services with trust and reliability.</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Financial Firm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="javascript/header.js"></script>
+</body>
+</html>
+
+<script>
+    window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('status') === 'success') {
+            // Create the alert box
+            const alertDiv = document.createElement('div');
+            alertDiv.style.position = 'fixed';
+            alertDiv.style.top = '40%';
+            alertDiv.style.left = '50%';
+            alertDiv.style.transform = 'translate(-50%, -50%)';
+            alertDiv.style.backgroundColor = 'rgb(81, 183, 72)';
+            alertDiv.style.color = 'white';
+            alertDiv.style.padding = '60px 100px'; // Increased padding for bigger alert
+            alertDiv.style.borderRadius = '10px';
+            alertDiv.style.fontFamily = 'Arial, sans-serif';
+            alertDiv.style.fontSize = '24px'; // Bigger font size
+            alertDiv.style.textAlign = 'center';
+            alertDiv.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
+            alertDiv.style.zIndex = '1000';
+            alertDiv.style.display = 'flex';
+            alertDiv.style.flexDirection = 'column';
+            alertDiv.style.alignItems = 'center';
+            alertDiv.style.transition = 'opacity 2s ease-in-out'; // Smooth opacity transition
+
+            // Add the tick mark container
+            const tickContainer = document.createElement('div');
+            tickContainer.style.width = '70px';
+            tickContainer.style.height = '70px';
+            tickContainer.style.border = '5px solid white';
+            tickContainer.style.borderRadius = '50%';
+            tickContainer.style.position = 'relative';
+            tickContainer.style.display = 'flex';
+            tickContainer.style.justifyContent = 'center';
+            tickContainer.style.alignItems = 'center';
+            tickContainer.style.marginBottom = '30px'; // Increased margin for bigger alert
+
+            // Add the tick mark
+            const tickMark = document.createElement('div');
+            tickMark.style.width = '25px';
+            tickMark.style.height = '15px';
+            tickMark.style.borderBottom = '5px solid white';
+            tickMark.style.borderLeft = '5px solid white';
+            tickMark.style.transform = 'rotate(-45deg)';
+            tickMark.style.opacity = '0'; // Start hidden for animation
+
+            tickContainer.appendChild(tickMark);
+            alertDiv.appendChild(tickContainer);
+
+            // Add the message
+            const alertMessage = document.createElement('div');
+            alertMessage.textContent = 'Thank you for your payment!';
+            alertDiv.appendChild(alertMessage);
+
+            document.body.appendChild(alertDiv);
+
+            // Animate the tick mark
+            setTimeout(() => {
+                tickMark.style.opacity = '1';
+                tickMark.style.transition = 'opacity 0.8s ease-in-out';
+            }, 500);
+
+            setTimeout(() => {
+                alertDiv.style.opacity = '0.4'; // Apply transparency
+            }, 1000);
+
+            setTimeout(() => {
+                alertDiv.remove();
+            }, 3000);
+
+            const newUrl = window.location.href.split('?')[0];
+            window.history.replaceState(null, '', newUrl);
+        }
+    };
+</script>
